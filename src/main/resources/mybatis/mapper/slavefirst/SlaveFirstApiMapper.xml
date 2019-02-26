@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lance.business.dao.slavefirst.SlaveFirstApiMapper">
+    <!-- 获取收费项目 -->
+    <select id="getAllItemInfo" resultType="Map">
+        <![CDATA[
+        SELECT *
+        FROM TABLE_ITEM
+        ]]>
+    </select>
+</mapper>

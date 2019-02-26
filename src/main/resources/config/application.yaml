@@ -1,0 +1,35 @@
+server:
+  servlet:
+    context-path: /mulDsMyBatisDemo
+    application-display-name: mulDsMyBatisDemo
+# spring
+spring:
+  profiles:
+    active: dev
+  main:
+    banner-mode: console
+  output:
+    ansi:
+      enabled: detect
+  devtools:
+    restart:
+      enabled: true
+# utf-8 HttpMessageConverter Gson
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+    converters:
+      preferred-json-mapper: gson
+  gson:
+    date-format: yyyy-MM-dd HH:mm:ss
+# mybatis config
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*/*.xml
+# logging config
+logging:
+  register-shutdown-hook: true
+  folderPath: /logGroup/mulDsMyBatisDemo/
+  config: classpath:config/logback-spring.xml
